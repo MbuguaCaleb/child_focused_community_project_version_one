@@ -4,14 +4,14 @@
         <!-- logo start -->
         <div class="page-logo">
             <a href="index.html">
-                <img alt="" src="assets/img/logo.png">
-                <span class="logo-default">Spice</span> </a>
+                <img alt=""  class="img-fluid" style="max-width: 70%;" src="assets/img/fhlogothree.png">
+               </a>
         </div>
         <!-- logo end -->
         <ul class="nav navbar-nav navbar-left in">
-            <li><a href="index.html#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
+            <li><a href="/dashboard" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
         </ul>
-        <form class="search-form-opened" action="index.html#" method="GET">
+        <form class="search-form-opened" action="/dashboard" method="GET">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search..." name="query">
                 <span class="input-group-btn search-btn">
@@ -118,7 +118,7 @@
                         <li>
                             <ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283">
                                 <li>
-                                    <a href="index.html#">
+                                    <a href="/dashboard">
                                         <span class="photo">
                                             <img src="assets/img/user/user2.jpg" class="img-circle" alt="">
                                         </span>
@@ -130,7 +130,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index.html#">
+                                    <a href="/dashboard">
                                         <span class="photo">
                                             <img src="assets/img/user/user3.jpg" class="img-circle" alt="">
                                         </span>
@@ -143,7 +143,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index.html#">
+                                    <a href="/dashboard">
                                         <span class="photo">
                                             <img src="assets/img/user/user1.jpg" class="img-circle" alt="">
                                         </span>
@@ -155,7 +155,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index.html#">
+                                    <a href="/dashboard">
                                         <span class="photo">
                                             <img src="assets/img/user/user8.jpg" class="img-circle" alt="">
                                         </span>
@@ -167,7 +167,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="index.html#">
+                                    <a href="/dashboard">
                                         <span class="photo">
                                             <img src="assets/img/user/user5.jpg" class="img-circle" alt="">
                                         </span>
@@ -180,7 +180,7 @@
                                 </li>
                             </ul>
                             <div class="dropdown-menu-footer">
-                                <a href="index.html#"> All Messages </a>
+                                <a href="/dashboard"> All Messages </a>
                             </div>
                         </li>
                     </ul>
@@ -200,12 +200,12 @@
                                 <i class="icon-user"></i> Profile </a>
                         </li>
                         <li>
-                            <a href="index.html#">
+                            <a href="/dashboard">
                                 <i class="icon-settings"></i> Settings
                             </a>
                         </li>
                         <li>
-                            <a href="index.html#">
+                            <a href="/dashboard">
                                 <i class="icon-directions"></i> Help
                             </a>
                         </li>

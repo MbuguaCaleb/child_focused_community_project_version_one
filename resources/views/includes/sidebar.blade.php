@@ -16,8 +16,8 @@
                                     <img src="assets/img/dp.jpg" class="img-responsive" alt=""> </div>
                             </div>
                             <div class="profile-usertitle">
-                                <div class="sidebar-userpic-name"> John Deo </div>
-                                <div class="profile-usertitle-job"> Manager </div>
+                                <div class="sidebar-userpic-name"> {{Auth::user()->username}}</div>
+                                <div class="profile-usertitle-job">{{Auth::user()->role = 1 ? 'House Head' :'Sponsor'}} </div>
                             </div>
                             <div class="sidebar-userpic-btn">
                                 <a class="tooltips" href="user_profile.html" data-placement="top"
