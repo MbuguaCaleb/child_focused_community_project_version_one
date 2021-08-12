@@ -23,22 +23,29 @@
 	<div class="limiter">
 		<div class="container-login100 page-background">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="{{url('login')}}" method="POST">
-                    @method('POST')
-                    @csrf
+				<form class="login100-form validate-form" action="/login" method="POST">
+                    @csrf()
 					<span class="login100-form-logo">
-						<i class="zmdi zmdi-flower"></i>
+                        <img src="assets/img/fhlogo.png" class="img-fluid" alt="Responsive image">
 					</span>
 					<span class="login100-form-title p-b-34 p-t-27">
 						Log in
 					</span>
 					<div class="wrap-input100 validate-input" data-validate="Enter username">
-						<input class="input100" type="text" name="username" placeholder="Username">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+						<input class="input100  @error('email') is-invalid @enderror" type="email" name="email" placeholder="email"   value="{{old('email')}}">
+						<span class="focus-input100" data-placeholder="&#xf207;">
+                        </span>
+                        @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                      
 					</div>
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100  @error('password') is-invalid @enderror" type="password" name="password" placeholder="Password" value="{{old('password')}}">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+                        @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
 					</div>
 					<div class="contact100-form-checkbox">
 						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">

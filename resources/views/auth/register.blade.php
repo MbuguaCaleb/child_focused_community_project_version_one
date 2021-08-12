@@ -7,7 +7,7 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	<meta name="description" content="Responsive Admin Template" />
 	<meta name="author" content="SmartUniversity" />
-	<title>Spice Hotel | Bootstrap 4 Admin Dashboard Template + UI Kit</title>
+	<title>CFCT |Child Sponsorship Application</title>
 	<!-- icons -->
 	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="assets/plugins/iconic/css/material-design-iconic-font.min.css">
@@ -16,16 +16,17 @@
 	<!-- style -->
 	<link rel="stylesheet" href="assets/css/pages/extra_pages.css">
 	<!-- favicon -->
-	<link rel="shortcut icon" href="assets/img/favicon.ico" />
+	<link rel="shortcut icon" href="assets/img/fhlogo" />
 </head>
 
 <body>
 	<div class="limiter">
 		<div class="container-login100 page-background">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
-					<span class="login100-form-logo">
-						<i class="zmdi zmdi-flower"></i>
+				<form class="login100-form validate-form" action="/register" method="POST">
+                    @csrf()
+                    <span class="login100-form-logo">
+                        <img src="assets/img/fhlogo.png" class="img-fluid" alt="Responsive image">
 					</span>
 					<span class="login100-form-title p-b-34 p-t-27">
 						Registration
@@ -33,28 +34,58 @@
 					<div class="row">
 						<div class="col-lg-6 p-t-20">
 							<div class="wrap-input100 validate-input" data-validate="Enter username">
-								<input class="input100" type="text" name="username" placeholder="Username">
+								<input class="input100   @error('username') is-invalid @enderror" type="text" name="username" placeholder="Username" autocomplete="off">
 								<span class="focus-input100" data-placeholder="&#xf207;"></span>
+                                @error('username')
+                               <div class="text-danger">{{ $message }}</div>
+                                @enderror
 							</div>
 						</div>
 						<div class="col-lg-6 p-t-20">
 							<div class="wrap-input100 validate-input" data-validate="Enter email">
-								<input class="input100" type="email" name="email" placeholder="Email">
+								<input class="input100   @error('email') is-invalid @enderror" type="email" name="email" placeholder="Email" autocomplete="off">
 								<span class="focus-input100" data-placeholder="&#xf207;"></span>
+                                @error('email')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
 							</div>
 						</div>
+                      
+                        
 						<div class="col-lg-6 p-t-20">
 							<div class="wrap-input100 validate-input" data-validate="Enter password">
-								<input class="input100" type="password" name="pass" placeholder="Password">
+								<input class="input100  @error('password') is-invalid @enderror" type="password" name="password" placeholder="Password"  id="password" >
 								<span class="focus-input100" data-placeholder="&#xf191;"></span>
+                               
 							</div>
+                            @error('password')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
 						</div>
 						<div class="col-lg-6 p-t-20">
 							<div class="wrap-input100 validate-input" data-validate="Enter password again">
-								<input class="input100" type="password" name="pass2" placeholder="Confirm password">
+								<input class="input100 @error('confirmed') is-invalid @enderror" type="password" name="password_confirmation" placeholder="Confirm password" id="password_confirmation" >
 								<span class="focus-input100" data-placeholder="&#xf191;"></span>
+                               
 							</div>
+                            @error('confirmed')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
 						</div>
+                        <div class="col-lg-12 p-t-20">
+                            <div class="wrap-input100  @error('role') is-invalid @enderror">
+                               
+                                <select name="role" id="role" class="form-control">
+                                    <option>Please Select Your Category</option>
+                                    <option>House Head </option>
+                                    <option>Sponsor</option>
+                                    @error('role')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                   
+                                </select>
+                            </div>
+                        </div>
 					</div>
 					<div class="contact100-form-checkbox">
 						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
