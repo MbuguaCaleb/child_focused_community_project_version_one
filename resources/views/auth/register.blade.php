@@ -16,7 +16,7 @@
 	<!-- style -->
 	<link rel="stylesheet" href="assets/css/pages/extra_pages.css">
 	<!-- favicon -->
-	<link rel="shortcut icon" href="assets/img/fhlogo" />
+	<link rel="shortcut icon" href="assets/img/fhlogotwo.png" />
 </head>
 
 <body>
@@ -95,7 +95,7 @@
 					</div>
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Sign In
+							Sign Up
 						</button>
 					</div>
 					<div class="text-center p-t-90">

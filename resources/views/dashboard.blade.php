@@ -7,7 +7,7 @@
         </div>
         <ol class="breadcrumb page-breadcrumb pull-right">
             <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                    href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    href="/dashboard">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
             </li>
             <li class="active">Dashboard</li>
         </ol>
@@ -20,7 +20,7 @@
             <div class="info-box bg-blue">
                 <span class="info-box-icon push-bottom"><i class="material-icons">style</i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Orders</span>
+                    <span class="info-box-text">Total House Holds</span>
                     <span class="info-box-number">450</span>
                     <div class="progress">
                         <div class="progress-bar width-60"></div>
@@ -39,7 +39,7 @@
                 <span class="info-box-icon push-bottom"><i
                         class="material-icons">card_travel</i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">New Booking</span>
+                    <span class="info-box-text">Total Number of Children</span>
                     <span class="info-box-number">155</span>
                     <div class="progress">
                         <div class="progress-bar width-40"></div>
@@ -58,7 +58,7 @@
                 <span class="info-box-icon push-bottom"><i
                         class="material-icons">phone_in_talk</i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Inquiry</span>
+                    <span class="info-box-text">Total Children Sponsored</span>
                     <span class="info-box-number">52</span>
                     <div class="progress">
                         <div class="progress-bar width-80"></div>
@@ -77,7 +77,7 @@
                 <span class="info-box-icon push-bottom"><i
                         class="material-icons">monetization_on</i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Total Earning</span>
+                    <span class="info-box-text">Children I Sponsor</span>
                     <span class="info-box-number">13,921</span><span>$</span>
                     <div class="progress">
                         <div class="progress-bar width-60"></div>
