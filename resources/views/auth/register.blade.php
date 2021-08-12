@@ -1,59 +1,87 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<html>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta name="description" content="Responsive Admin Template" />
+	<meta name="author" content="SmartUniversity" />
+	<title>Spice Hotel | Bootstrap 4 Admin Dashboard Template + UI Kit</title>
+	<!-- icons -->
+	<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="assets/plugins/iconic/css/material-design-iconic-font.min.css">
+	<!-- bootstrap -->
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- style -->
+	<link rel="stylesheet" href="assets/css/pages/extra_pages.css">
+	<!-- favicon -->
+	<link rel="shortcut icon" href="assets/img/favicon.ico" />
+</head>
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+<body>
+	<div class="limiter">
+		<div class="container-login100 page-background">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-flower"></i>
+					</span>
+					<span class="login100-form-title p-b-34 p-t-27">
+						Registration
+					</span>
+					<div class="row">
+						<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter username">
+								<input class="input100" type="text" name="username" placeholder="Username">
+								<span class="focus-input100" data-placeholder="&#xf207;"></span>
+							</div>
+						</div>
+						<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter email">
+								<input class="input100" type="email" name="email" placeholder="Email">
+								<span class="focus-input100" data-placeholder="&#xf207;"></span>
+							</div>
+						</div>
+						<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter password">
+								<input class="input100" type="password" name="pass" placeholder="Password">
+								<span class="focus-input100" data-placeholder="&#xf191;"></span>
+							</div>
+						</div>
+						<div class="col-lg-6 p-t-20">
+							<div class="wrap-input100 validate-input" data-validate="Enter password again">
+								<input class="input100" type="password" name="pass2" placeholder="Confirm password">
+								<span class="focus-input100" data-placeholder="&#xf191;"></span>
+							</div>
+						</div>
+					</div>
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Sign In
+						</button>
+					</div>
+					<div class="text-center p-t-90">
+						<a class="txt1" href="/login">
+							You already have a membership?
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- start js include path -->
+	<script src="assets/plugins/jquery/jquery.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/pages/extra_pages/login.js"></script>
+	<!-- end js include path -->
+</body>
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
-
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-            </div>
-
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+</html>
