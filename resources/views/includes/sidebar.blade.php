@@ -45,32 +45,6 @@
 
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="index.html#" class="nav-link nav-toggle">
-                        <i class="material-icons">vpn_key</i>
-                        <span class="title">Rooms</span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item">
-                            <a href="add_room.html" class="nav-link ">
-                                <span class="title">Add Room Details</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="all_rooms.html" class="nav-link ">
-                                <span class="title">View All Rooms</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="edit_room.html" class="nav-link ">
-                                <span class="title">Edit Room Details</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-
             </ul>
         </div>
     </div>

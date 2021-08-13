@@ -27,3 +27,4 @@ require __DIR__ . '/auth.php';
 
 //HouseHold Routes
 Route::get('/household/create', [HouseHoldController::class, 'create'])->name('household-create');
+Route::POST('/household/store', [HouseHoldController::class, 'store'])->name('household-store');
