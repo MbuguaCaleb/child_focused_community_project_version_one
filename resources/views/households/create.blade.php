@@ -24,7 +24,7 @@
                 <div class="col-lg-6 p-t-20">
                     <div
                         class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-width">
-                        <input class="mdl-textfield__input" type="text" id="text4">
+                        <input class="mdl-textfield__input" type="text" id="no+0f_children" name="no_of_children">
                         <label class="mdl-textfield__label" for="text4">No of Children
                           </label>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="col-lg-6 p-t-20">
                     <div
                         class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height select-width">
-                        <input class="mdl-textfield__input" type="text" id="sample2" value="India"
+                        <input class="mdl-textfield__input" type="text" id="country" name="country" 
                             readonly tabIndex="-1">
                         <label for="sample2" class="pull-right margin-0">
                             <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
@@ -41,9 +41,11 @@
                         <label for="sample2" class="mdl-textfield__label">Country</label>
                         <ul data-mdl-for="sample2"
                             class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                            <li class="mdl-menu__item" data-val="DE">Shrilanka</li>
-                            <li class="mdl-menu__item" data-val="BY">India</li>
-                            <li class="mdl-menu__item" data-val="RU">Germany</li>
+                            <li class="mdl-menu__item" data-val="DE">Kenya</li>
+                            <li class="mdl-menu__item" data-val="BY">Uganda</li>
+                            <li class="mdl-menu__item" data-val="RU">Tanzania</li>
+                            <li class="mdl-menu__item" data-val="RU">Other</li>
+
                         </ul>
                     </div>
                 </div>

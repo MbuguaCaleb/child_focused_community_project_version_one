@@ -4,7 +4,7 @@
         <!-- logo start -->
         <div class="page-logo">
             <a href="index.html">
-                <img alt=""  class="img-fluid" style="max-width: 70%;" src="assets/img/fhlogothree.png">
+                <img alt=""  class="img-fluid" style="max-width: 70%;" src="{{asset('assets/img/fhlogothree.png')}}">
                </a>
         </div>
         <!-- logo end -->
