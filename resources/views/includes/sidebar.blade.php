@@ -26,19 +26,19 @@
 
 
                 <li class="nav-item">
-                    <a href="index.html#" class="nav-link nav-toggle">
+                    <a href="{{route('household-index')}}" class="nav-link nav-toggle">
                         <i class="material-icons">business_center</i>
                         <span class="title">House Holds</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="{{url('/household/create')}}" class="nav-link ">
+                            <a href="{{route('household-create')}}" class="nav-link ">
                                 <span class="title">New HouseHold</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="view_booking.html" class="nav-link ">
+                            <a href="{{route('household-index')}}" class="nav-link ">
                                 <span class="title">View HouseHold</span>
                             </a>
                         </li>

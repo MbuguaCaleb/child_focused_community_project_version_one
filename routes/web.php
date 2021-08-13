@@ -26,5 +26,8 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 //HouseHold Routes
-Route::get('/household/create', [HouseHoldController::class, 'create'])->name('household-create');
-Route::POST('/household/store', [HouseHoldController::class, 'store'])->name('household-store');
+Route::prefix('household')->group(function () {
+    Route::get('/index', [HouseHoldController::class, 'index'])->name('household-index');
+    Route::get('/create', [HouseHoldController::class, 'create'])->name('household-create');
+    Route::POST('/store', [HouseHoldController::class, 'store'])->name('household-store');
+});

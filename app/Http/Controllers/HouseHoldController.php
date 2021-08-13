@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateHouseHoldRequest;
+use App\Models\HouseHold;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HouseHoldController extends Controller
 {
@@ -14,6 +17,7 @@ class HouseHoldController extends Controller
 
     public function index()
     {
+        return view('households.index');
     }
 
     /**
@@ -32,9 +36,23 @@ class HouseHoldController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateHouseHoldRequest $request)
     {
-        return $request;
+
+        try {
+            HouseHold::create([
+                'no_of_children' => auth()->id(),
+                'country' => $request->country,
+                'custodian_id' => Auth::user()->id,
+                'custodian_name' => Auth::user()->username
+            ]);
+            return redirect('/household/index')->with('status', 'House Hold Created Successfully!');
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+            flash('Sorry! Please try again.')->error();
+
+            return back();
+        }
     }
 
     /**

@@ -24,7 +24,11 @@
             </ul>
         </div>
         @endif
-
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+        @endif
         <div class="card-box">
             <div class="card-head">
                 <header>Details</header>
@@ -35,7 +39,7 @@
                     <div class="col-lg-6 p-t-20">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-width">
                             <input class="mdl-textfield__input @error('no_of_children') is-invalid @enderror"
-                                type="text" id="no_of_children" name="no_of_children"
+                                type="number" id="no_of_children" name="no_of_children"
                                 value="{{ old('no_of_children') }}">
                             <label class=" mdl-textfield__label" for="no_of_children">No of Children
                             </label>
