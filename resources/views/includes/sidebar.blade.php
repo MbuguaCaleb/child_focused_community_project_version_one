@@ -13,7 +13,7 @@
                     <div class="user-panel">
                         <div class="row">
                             <div class="sidebar-userpic">
-                                <img src="assets/img/dp.jpg" class="img-responsive" alt=""> </div>
+                                <img src="{{asset('assets/img/dp.jpg')}}" class="img-responsive" alt=""> </div>
                         </div>
                         <div class="profile-usertitle">
                             <div class="sidebar-userpic-name"> {{Auth::user()->username}}</div>
@@ -33,7 +33,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a href="new_booking.html" class="nav-link ">
+                            <a href="{{url('/household/create')}}" class="nav-link ">
                                 <span class="title">New HouseHold</span>
                             </a>
                         </li>
