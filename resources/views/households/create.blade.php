@@ -9,7 +9,8 @@
             <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{route('dashboard')}}">Home</a>&nbsp;<i
                     class="fa fa-angle-right"></i>
             </li>
-            <li class="active">View Existing HouseHolds</li>
+            <li class="active"><a class="parent-item" href="{{route('household-index')}}">View Existing HouseHolds</a>
+            </li>
         </ol>
     </div>
 </div>
@@ -24,11 +25,7 @@
             </ul>
         </div>
         @endif
-        @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-        @endif
+        @include('flash::message')
         <div class="card-box">
             <div class="card-head">
                 <header>Details</header>

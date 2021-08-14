@@ -9,7 +9,7 @@
         </div>
         <!-- logo end -->
         <ul class="nav navbar-nav navbar-left in">
-            <li><a href="{{route('dashboard')}}" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
+            <li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
         </ul>
         <form class="search-form-opened" action="{{route('dashboard')}}" method="GET">
             <div class="input-group">

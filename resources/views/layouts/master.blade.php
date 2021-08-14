@@ -32,6 +32,9 @@
 	<link rel="shortcut icon" href="{{asset('assets/img/fhlogotwo.png')}}" />
 	<!-- Date Time item CSS -->
 	<link rel="stylesheet" href="{{asset('assets/plugins/flatpicker/flatpickr.min.css')}}">
+	   <!-- data tables -->
+	   <link href="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css')}}" rel="stylesheet"
+	   type="text/css" />
 </head>
 <!-- END HEAD -->
 

@@ -25,4 +25,8 @@
 <script src="{{asset('assets/plugins/morris/morris.min.js')}}"></script>
 <script src="{{asset('assets/plugins/morris/raphael-min.js')}}"></script>
 <script src="{{asset('assets/js/pages/chart/morris/morris_home_data.js')}}"></script>
+ <!-- data tables -->
+ <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+ <script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js')}}"></script>
+ <script src="{{asset('assets/js/pages/table/table_data.js')}}"></script>
 

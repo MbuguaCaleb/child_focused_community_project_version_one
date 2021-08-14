@@ -17,7 +17,8 @@ class HouseHoldController extends Controller
 
     public function index()
     {
-        return view('households.index');
+        $details = HouseHold::all();
+        return view('households.index', ['details' => $details]);
     }
 
     /**
@@ -46,11 +47,10 @@ class HouseHoldController extends Controller
                 'custodian_id' => Auth::user()->id,
                 'custodian_name' => Auth::user()->username
             ]);
-            return redirect('/household/index')->with('status', 'House Hold Created Successfully!');
+            flash('House Hold Created Successfully!')->success();
+            return redirect('/household/index');
         } catch (\Throwable $th) {
-            return $th->getMessage();
             flash('Sorry! Please try again.')->error();
-
             return back();
         }
     }
