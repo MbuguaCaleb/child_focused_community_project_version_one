@@ -16,17 +16,26 @@
 <script src="{{asset('assets/js/theme-color.js')}}"></script>
 <!-- material -->
 <script src="{{asset('assets/plugins/material/material.min.js')}}"></script>
+<script src="{{asset('assets/js/pages/material_select/getmdl-select.js')}}"></script>
+
 <!-- animation -->
 <script src="{{asset('assets/js/pages/ui/animations.js')}}"></script>
 <script src="{{asset('assets/js/pages/material_select/getmdl-select.js')}}"></script>
+
+<!-- date and time 	 -->
+
 <script src="{{asset('assets/plugins/flatpicker/flatpickr.min.js')}}"></script>
 <script src="{{asset('assets/js/pages/datetime/datetime-data.js')}}"></script>
 <!-- morris chart -->
 <script src="{{asset('assets/plugins/morris/morris.min.js')}}"></script>
 <script src="{{asset('assets/plugins/morris/raphael-min.js')}}"></script>
 <script src="{{asset('assets/js/pages/chart/morris/morris_home_data.js')}}"></script>
- <!-- data tables -->
- <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
- <script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js')}}"></script>
- <script src="{{asset('assets/js/pages/table/table_data.js')}}"></script>
+<!-- data tables -->
+<script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('assets/js/pages/table/table_data.js')}}"></script>
 
+
+<!-- dropzone -->
+<script src="{{asset('assets/plugins/dropzone/dropzone.js')}}"></script>
+<script src="{{asset('assets/plugins/dropzone/dropzone-call.js')}}"></script>

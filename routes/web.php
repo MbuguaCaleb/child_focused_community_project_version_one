@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HouseHoldDetailsController;
 use App\Http\Controllers\HouseHoldController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,8 +26,16 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 //HouseHold Routes
-Route::prefix('household')->group(function () {
+Route::prefix('/household')->group(function () {
     Route::get('/index', [HouseHoldController::class, 'index'])->name('household-index');
     Route::get('/create', [HouseHoldController::class, 'create'])->name('household-create');
     Route::POST('/store', [HouseHoldController::class, 'store'])->name('household-store');
+});
+
+
+//HouseHold Routes
+Route::prefix('/household/details')->group(function () {
+    Route::get('/index', [HouseHoldDetailsController::class, 'index'])->name('household-details-index');
+    Route::get('/create', [HouseHoldDetailsController::class, 'create'])->name('household-details-create');
+    Route::POST('/store', [HouseHoldDetailsController::class, 'store'])->name('household-details-store');
 });

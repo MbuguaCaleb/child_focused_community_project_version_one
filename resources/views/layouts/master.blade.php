@@ -10,8 +10,9 @@
 	<meta name="author" content="SmartUniversity" />
 	<title>CFCT |Child Sponsorship Application</title>
 	<!-- icons -->
-	
-	<link href="{{asset('assets/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css" />
+
+	<link href="{{asset('assets/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet"
+		type="text/css" />
 	<link href="{{asset('assets/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
 	<!--bootstrap -->
 	<link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -32,39 +33,43 @@
 	<link rel="shortcut icon" href="{{asset('assets/img/fhlogotwo.png')}}" />
 	<!-- Date Time item CSS -->
 	<link rel="stylesheet" href="{{asset('assets/plugins/flatpicker/flatpickr.min.css')}}">
-	   <!-- data tables -->
-	   <link href="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css')}}" rel="stylesheet"
-	   type="text/css" />
+	<!-- data tables -->
+	<link href="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css')}}" rel="stylesheet"
+		type="text/css" />
+
+	<!-- dropzone -->
+	<link href="{{asset('assets/plugins/dropzone/dropzone.css')}}" rel="stylesheet" media="screen">
+
 </head>
 <!-- END HEAD -->
 
 <body
 	class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
 	<div class="page-wrapper">
-		
+
 		@include('includes.header')
 		<!-- start page container -->
 		<div class="page-container">
-		
-        @include('includes.sidebar')
+
+			@include('includes.sidebar')
 			<!-- start page content -->
 			<div class="page-content-wrapper">
-				
 
-                <div class="page-content">
-					
-                    @yield('content')
 
-                </div>
+				<div class="page-content">
+
+					@yield('content')
+
+				</div>
 
 			</div>
 			<!-- end page content -->
-			
+
 		</div>
 		<!-- end page container -->
 		@include('includes.footer')
 	</div>
-	    @include('includes.scripts')
+	@include('includes.scripts')
 </body>
 
 </html>

@@ -2,25 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateHouseHoldRequest;
-use App\Models\HouseHold;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class HouseHoldController extends Controller
+class HouseHoldDetailsController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware(['auth']);
     }
 
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        //load the welcome page differently if you are a household head or a sponsoe
-        (Auth::user()->role == 1) ? $details = HouseHold::where('custodian_id', Auth::user()->id)->get() :  $details = HouseHold::all();
-
-        return view('households.index', ['details' => $details]);
+        return view('households.details.index');
     }
 
     /**
@@ -30,7 +29,7 @@ class HouseHoldController extends Controller
      */
     public function create()
     {
-        return view('households.create');
+        return view('households.details.create');
     }
 
     /**
@@ -39,22 +38,9 @@ class HouseHoldController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateHouseHoldRequest $request)
+    public function store(Request $request)
     {
-
-        try {
-            HouseHold::create([
-                'no_of_children' => auth()->id(),
-                'country' => $request->country,
-                'custodian_id' => Auth::user()->id,
-                'custodian_name' => Auth::user()->username
-            ]);
-            flash('House Hold Created Successfully!')->success();
-            return redirect('/household/index');
-        } catch (\Throwable $th) {
-            flash('Sorry! Please try again.')->error();
-            return back();
-        }
+        return $request;
     }
 
     /**

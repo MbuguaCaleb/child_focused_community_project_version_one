@@ -47,10 +47,10 @@
                                         <td>{{$detail->custodian_name}}</td>
                                         <td>{{$detail->country}}</td>
                                         <td>{{$detail->no_of_children}}</td>
-                                        <th><button type="button" class="btn btn-success"><i
+                                        <th><a href="{{route('household-details-index')}}" type="button" class="btn btn-success"><i
                                                     class="fa fa-address-book"></i>
                                                 More Details
-                                            </button></th>
+                                            </></th>
 
                                     </tr>
                                     @endforeach
