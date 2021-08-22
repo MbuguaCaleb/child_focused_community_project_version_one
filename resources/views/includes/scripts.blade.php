@@ -39,3 +39,12 @@
 <!-- dropzone -->
 <script src="{{asset('assets/plugins/dropzone/dropzone.js')}}"></script>
 <script src="{{asset('assets/plugins/dropzone/dropzone-call.js')}}"></script>
+
+<script>
+    $( document ).ready(function() {
+    $(".test").click(()=>{
+
+        alert(2)
+    })
+});
+</script>

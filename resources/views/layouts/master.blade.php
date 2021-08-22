@@ -39,6 +39,7 @@
 
 	<!-- dropzone -->
 	<link href="{{asset('assets/plugins/dropzone/dropzone.css')}}" rel="stylesheet" media="screen">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>
 <!-- END HEAD -->
