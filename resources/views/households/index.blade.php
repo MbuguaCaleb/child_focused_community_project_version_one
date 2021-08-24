@@ -47,10 +47,12 @@
                                         <td>{{$detail->custodian_name}}</td>
                                         <td>{{$detail->country}}</td>
                                         <td>{{$detail->no_of_children}}</td>
-                                        <th><a href="{{route('household-details-index')}}" type="button" class="btn btn-success"><i
-                                                    class="fa fa-address-book"></i>
+
+                                        <th><a href="{{route('household-details-index',['house_id'=>Crypt::encryptString($detail->id)])}}"
+                                                type="button" class="btn btn-success"><i class="fa fa-address-book"></i>
                                                 More Details
-                                            </></th>
+                                            </a>
+                                        </th>
 
                                     </tr>
                                     @endforeach

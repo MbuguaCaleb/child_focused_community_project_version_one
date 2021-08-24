@@ -31,6 +31,7 @@ class HouseHoldDetailsRequest extends FormRequest
             'gender' => 'required',
             'dob' => 'required',
             'description' => 'required',
+            'house_id' => 'required'
         ];
     }
 }

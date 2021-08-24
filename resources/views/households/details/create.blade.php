@@ -9,10 +9,10 @@
             <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{route('dashboard')}}">Home</a>&nbsp;<i
                     class="fa fa-angle-right"></i>
             </li>
-            <li><a class="parent-item" href="{{route('household-details-create')}}">New Child</a>&nbsp;<i
+            <li><a class="parent-item" href="{{route('household-details-create',[Crypt::encryptString($house_id)])}}">New Child</a>&nbsp;<i
                     class="fa fa-angle-right"></i>
             </li>
-            <li class="active"><a class="parent-item" href="{{route('household-details-index')}}">House Details</a></li>
+            <li class="active"><a class="parent-item" href="{{route('household-details-index',[Crypt::encryptString($house_id)])}}">House Details</a></li>
         </ol>
     </div>
 </div>
@@ -50,6 +50,7 @@
                 </div>
                 <div class="card-body row">
 
+                    <input type="hidden" name="house_id" value="{{$house_id}}">
                     <div class="col-lg-6 p-t-20">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                             <input class="mdl-textfield__input  @error('first_name') is-invalid @enderror" type="text"
