@@ -120,7 +120,7 @@
                                 <li>
                                     <a href="{{route('dashboard')}}">
                                         <span class="photo">
-                                            <img src="assets/img/user/user2.jpg" class="img-circle" alt="">
+                                            <img  src="{{asset('assets/img/profile.jpg')}}" class="img-circle" alt="">
                                         </span>
                                         <span class="subject">
                                             <span class="from"> Sarah Smith </span>
@@ -132,7 +132,7 @@
                                 <li>
                                     <a href="{{route('dashboard')}}">
                                         <span class="photo">
-                                            <img src="assets/img/user/user3.jpg" class="img-circle" alt="">
+                                            <img  src="{{asset('assets/img/profile.jpg')}}"class="img-circle" alt="">
                                         </span>
                                         <span class="subject">
                                             <span class="from"> John Deo </span>
@@ -145,7 +145,7 @@
                                 <li>
                                     <a href="{{route('dashboard')}}">
                                         <span class="photo">
-                                            <img src="assets/img/user/user1.jpg" class="img-circle" alt="">
+                                            <img  src="{{asset('assets/img/profile.jpg')}}" class="img-circle" alt="">
                                         </span>
                                         <span class="subject">
                                             <span class="from"> Rajesh </span>
@@ -157,7 +157,7 @@
                                 <li>
                                     <a href="{{route('dashboard')}}">
                                         <span class="photo">
-                                            <img src="assets/img/user/user8.jpg" class="img-circle" alt="">
+                                            <img  src="{{asset('assets/img/profile.jpg')}}" class="img-circle" alt="">
                                         </span>
                                         <span class="subject">
                                             <span class="from"> Lina Smith </span>
@@ -169,7 +169,7 @@
                                 <li>
                                     <a href="{{route('dashboard')}}">
                                         <span class="photo">
-                                            <img src="assets/img/user/user5.jpg" class="img-circle" alt="">
+                                            <img  src="{{asset('assets/img/profile.jpg')}}" class="img-circle" alt="">
                                         </span>
                                         <span class="subject">
                                             <span class="from"> Jacob Ryan </span>
@@ -190,7 +190,7 @@
                 <li class="dropdown dropdown-user">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                         data-close-others="true">
-                        <img alt="" class="img-circle " src="assets/img/dp.jpg" />
+                        <img alt="" class="img-circle "  src="{{asset('assets/img/profile.jpg')}}" />
                         <span class="username username-hide-on-mobile"> {{Auth::user()->username}} </span>
                         <i class="fa fa-angle-down"></i>
                     </a>

@@ -139,7 +139,7 @@
                         <div class="mdl-textfield mdl-js-textfield txt-full-width">
                             <textarea class="mdl-textfield__input" rows="4" id="description" name="description"
                                 @error('description') is-invalid @enderror
-                                value="{{$house_hold_child_detail->description}}"></textarea>
+                               >{{$house_hold_child_detail->description}}</textarea>
                             <label class="mdl-textfield__label" for="text7">More Details</label>
                         </div>
                         @error('description')
