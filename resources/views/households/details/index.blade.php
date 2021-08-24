@@ -57,26 +57,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($house_hold_details as $house_hold_detail)
+                            @foreach ($house_hold_details as $house_hold_child_detail)
                             <tr class="odd gradeX">
                                 <td class="user-circle-img">
-                                    <img src="{{ asset('uploads/'.$house_hold_detail->profile_picture) }}"
+                                    <img src="{{ asset('uploads/'.$house_hold_child_detail->profile_picture) }}"
                                         alt="No Image" width="70px" height="70px">
                                 </td>
-                                <td class="center">{{$house_hold_detail->first_name}}</td>
-                                <td class="center">{{$house_hold_detail->last_name}}</td>
-                                <td class="center">{{$house_hold_detail->gender}}</td>
-                                <td class="center">{{$house_hold_detail->dob}}</td>
-                                <td class="center">{{$house_hold_detail->age}}</td>
+                                <td class="center">{{$house_hold_child_detail->first_name}}</td>
+                                <td class="center">{{$house_hold_child_detail->last_name}}</td>
+                                <td class="center">{{$house_hold_child_detail->gender}}</td>
+                                <td class="center">{{$house_hold_child_detail->dob}}</td>
+                                <td class="center">{{$house_hold_child_detail->age}}</td>
                                 <td class="center">
-                                    @if($house_hold_detail->is_sponsored)
+                                    @if($house_hold_child_detail->is_sponsored)
                                     <span class="label label-sm label-success">Sponsored</span>
                                     @else
                                     <span class="label label-sm label-danger">UnSponsored</span>
                                     @endif
                                 </td>
                                 <td class="center">
-                                    <a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
+                                    <a href="{{route('household-details-edit',[Crypt::encryptString($house_hold_child_detail->id)])}}"
+                                        class="btn btn-tbl-edit btn-xs">
                                         <i class="fa fa-pencil"></i>
                                     </a>
                                     <button class="btn btn-tbl-delete btn-xs">

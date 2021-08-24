@@ -37,5 +37,7 @@ Route::prefix('/household')->group(function () {
 Route::prefix('/household/details')->group(function () {
     Route::get('/index/{house_id}', [HouseHoldDetailsController::class, 'index'])->name('household-details-index');
     Route::get('/create/{house_id}', [HouseHoldDetailsController::class, 'create'])->name('household-details-create');
+    Route::get('/edit/{house_child_id}', [HouseHoldDetailsController::class, 'edit'])->name('household-details-edit');
     Route::POST('/store', [HouseHoldDetailsController::class, 'store'])->name('household-details-store');
+    Route::POST('/update/{house_child_id}', [HouseHoldDetailsController::class, 'update'])->name('household-details-update');
 });
